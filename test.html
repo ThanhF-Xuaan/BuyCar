@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Tìm Kiếm Ô Tô</title>
+</head>
+<body>
+    <div class="container">
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" class="search" placeholder="   Tìm kiếm ô tô theo thương hiệu, kiểu dáng...">
+        </div>
+        <div class="filters">
+            <button class="filter-btn">Hãng & dòng xe</button>
+            <button class="filter-btn">Năm sản xuất</button>
+            <button class="filter-btn">Khoảng giá</button>
+            <button class="filter-btn">Số km đã đi</button>
+            <button class="filter-btn">Màu sắc</button>
+            <button class="filter-btn">Sắp xếp</button>
+        </div>
+    </div>
+    <script>
+        const searchInput = document.querySelector('.search');
+        const searchIcon = document.querySelector('.search-icon');
+    
+        searchInput.addEventListener('input', function() {
+            if (searchInput.value) {
+                searchIcon.style.opacity = '0'; // Ẩn biểu tượng
+            } else {
+                searchIcon.style.opacity = '1'; // Hiện biểu tượng lại
+            }
+        });
+    </script>
+</body>
+</html>
